@@ -14,12 +14,12 @@ class CandidateController extends Controller
 
 
         //test
-        $positions = \App\Models\Position::with('candidates')->get();
+        $position = \App\Models\Position::with('candidates')->get();
      
-        return view('layouts.home',compact('positions'));
+        return view('layouts.home',compact('position'));
         return response()->json([
             "status" => 1,
-            "data" => $positions
+            "data" => $position
         ]);
     }
 

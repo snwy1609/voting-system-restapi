@@ -3,8 +3,8 @@
 @section('content')
 <h1>Candidates</h1>
 <ul>
-    @if(!$positions->isEmpty())
-        @foreach ($positions as $position)
+    @if(!$position->isEmpty())
+        @foreach ($position as $position)
             
             <li>Position: {{$position->name}} <a href="/candidate/position/{{ $position->id }}/add"><button >Add Candidate</button></a>
                 <ul>
